@@ -1,0 +1,32 @@
+{% extends 'generic.html' %}
+{% block content %}
+<section class="forms">
+            <div class="grid-x">
+              <div class="cell">
+                <div class="widget-box with-padding">
+                  <form class="signup identity-form" method="post" action="/credit/invoice/">
+                      {% csrf_token %}
+                    <div class="form-header">
+                      <div class="form-header-icon">
+                      </div>
+                      <div class="form-header-title">
+                        <h2>افزایش اعتبار</h2>
+                      </div>
+                    </div>
+                    <div class="grid-x">
+                      <div class="small-12 large-12 padding-left-05">
+
+                        <div class="floated-label-wrapper">
+                          <label for="full-name">مبلغ اعتبار</label>
+                          <input type="text" id="full-name" name="amount" placeholder="مبلغ اعتبار">
+                        </div>
+                      </div>
+                    <input class="button submit-btn expanded" type="submit" value="افزودن">
+                  </form>
+                </div>
+              </div>
+            </div>
+          </section>
+{% endblock content %}
+
+

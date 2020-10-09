@@ -1,0 +1,41 @@
+{% extends 'generic.html' %}
+{% block content %}
+    <section class="table-onit">
+        <div class="grid-x">
+            <div class="cell">
+                <div class="widget-box with-padding">
+                    <div class="form-header">
+                        <div class="form-header-icon">
+                            <img src="images/face-scan.svg" alt="">
+                        </div>
+                        <div class="form-header-title">
+                            <h2>گزارش پرداخت ها</h2>
+
+                        </div>
+                    </div>
+
+
+                    <table>
+                        <thead>
+                        <tr>
+                            <th>مبلغ</th>
+                            <th>شماره پیگیری</th>
+                            <th>زمان</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {% for  payment in payments %}
+                            <tr>
+                                <td>{{ payment.amount }} ریال</td>
+                                <td>{{ payment.rfid }}</td>
+                                <td>{{ payment.time }}</td>
+
+                            </tr>
+                        {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock content %}

@@ -1,0 +1,26 @@
+{% load static %}
+{% block small_menu %}
+<div class="off-canvas position-right is-transition-push is-closed" id="offCanvasRight" data-off-canvas="e63zki-off-canvas" data-position="right" aria-hidden="true">
+        <div class="profile-avatar canvas-inner">
+          <div class="avatar-holder">
+            <img src="{% static 'images/profile.png' %}" alt="">
+          </div>
+          <div class="name-holder">
+            <h2> سلام {{ request.user.first_name }}</h2>
+            <p>میزان اعتبار: {{ request.user.balance }} ریال</p>
+            <a href="/profile" class="widget-button float-left">ویرایش</a>
+            <a href="/logout" class="widget-button float-left">خروج</a>
+          </div>
+        </div>
+        <div class="meun-holder canvas-inner">
+          <ul class="vertical menu icons icon-left">
+              <li><a href="/credit/add"><i class="far fa-gem"></i> <span>افزایش اعتبار</span></a></li>
+              <li><a href="/payment/view"><i class="far fa-gem"></i> <span>گزارش پرداختها</span></a></li>
+            <li><a href="/number"><i class="far fa-gem"></i> <span>شماره ها</span></a></li>
+              <li><a href="/cdr"><i class="fas fa-headset"></i> <span>گزارش درخواست ها</span></a></li>
+            <li><a href="/token/view"><i class="fas fa-receipt"></i> <span>تنظیمات API</span></a></li>
+
+          </ul>
+        </div>
+      </div>
+{% endblock small_menu %}

@@ -1,0 +1,67 @@
+{% extends 'generic.html' %}
+{% block content %}
+<section class="invoice-on">
+            <div class="grid-x">
+              <div class="cell">
+                <div class="widget-box with-padding">
+                  <div class="invoice-header">
+                    <div class="hero-invoic-icons">
+                      <i class="fas fa-receipt"></i>
+                    </div>
+
+                    <div class="hero-invoice">
+                      <h2>فاکتور شماره {{ id }}</h2>
+                      <p>افزایش اعتبار به میزان {{ amount }} ریال</p>
+                    </div>
+                  <svg class="dotted-border" width="100%" height="12px" preserveAspectRatio="none">
+                    <defs>
+                      <!-- the pattern for the border -->
+                      <pattern id="dots_large" width="26" height="12" patternUnits="userSpaceOnUse">
+                        <circle cy="12" cx="10" r="7" fill="white"></circle>
+                      </pattern>
+                    </defs>
+                    <!-- Set the pattern as background fill for the rect -->
+                    <rect width="100%" height="12px" fill="url(#dots_large)"></rect>
+                  </svg>
+                </div>
+                  <div class="dtable">
+
+                                <div class="thead" aria-hidden="true">
+                                  <div class="cell">عنوان</div>
+                                  <div class="cell">تعداد</div>
+                                  <div class="cell">قیمت</div>
+
+                                </div>
+
+                                <div class="trow">
+
+                                  <div class="cell cell-head"><h4>افزایش اعتبار</h4></div>
+                                  <div class="cell" aria-label="تعداد"><span>1</span></div>
+                                  <div class="cell" aria-label="قیمت"><span>{{ amount }} ریال</span></div>
+
+                                </div>
+
+
+
+                              </div>
+
+                              <div class="total-table grid-x">
+                                <div class="small-6 cell ttile">قیمت کل</div>
+                                <div class="small-6 cell tinner">{{ amount }} ریال</div>
+                                <div class="small-6 cell ttile">مالیات بر ارزش افزوده</div>
+                                <div class="small-6 cell tinner">{{ tax }} ریال</div>
+                                <div class="small-6 cell ttile">مبلغ قابل پرداخت</div>
+                                <div class="small-6 cell tinner">{{ total }} ریال</div>
+
+                              </div>
+
+                              <a href="/invoice/{{ id }}/pay" class="button submit-btn expanded">پرداخت</a>
+                              <a href="/" class="button cancel-btn expanded">انصراف</a>
+                              <a href="" class="button print-btn expanded">چاپ</a>
+                </div>
+              </div>
+            </div>
+          </section>
+{% endblock content %}
+
+

@@ -1,0 +1,88 @@
+{% extends 'generic.html' %}
+{% load static %}
+{% block content %}
+
+          <section class="two-columns">
+            <div class="grid-x grid-margin-x">
+                              <div class="small-12 medium-6 large-6 cell with-icons">
+                <div class="widget-box">
+                  <div class="grid-x">
+                    <div class="small-12 medium-12 large-5 cell widget-icons light-green">
+                      <div class="icon-holder-widget">
+                        <i class="fas fa-money-bill"></i>
+                      </div>
+                    </div>
+                    <div class="small-12 medium-12 large-7 cell engagement-title">
+                      <h3>{{ request.user.balance }} ریال</h3>
+                      <p>از اعتبار شما مانده است.</p>
+                      <a href="/credit/add" class="widget-button text-left">افزایش اعتبار</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="small-12 medium-6 large-6 cell with-engagement">
+                <div class="widget-box">
+                  <div class="grid-x">
+                    <div class="small-12 medium-12 large-5 cell engagement-circle">
+
+                      <div class="circle-holder-medium">
+                        <div class="circle-graph" id="graph-1" data-progress="{{ number_counts }}">
+                          <div class="circle">
+                            <div class="mask full">
+                              <div class="fill"></div>
+                            </div>
+                            <div class="mask half">
+                              <div class="fill"></div>
+                              <div class="fill fix"></div>
+                            </div>
+                          </div>
+                          <div class="inset">
+                            <div class="percentage"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="small-12 medium-12 large-7 cell engagement-title">
+                      <h3>تعداد شماره تلفن</h3>
+                      <p>شما {{ number_counts }} تلفن دارید.</p>
+                      <a href="/number" class="widget-button text-left">دریافت شماره</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+                <div class="small-12 medium-6 large-6 cell with-engagement">
+                <div class="widget-box">
+                  <div class="grid-x">
+                    <div class="small-12 medium-12 large-5 cell engagement-circle">
+
+                      <div class="circle-holder-medium">
+                        <div class="circle-graph" id="graph-1" data-progress="{{ calls_count }}">
+                          <div class="circle">
+                            <div class="mask full">
+                              <div class="fill"></div>
+                            </div>
+                            <div class="mask half">
+                              <div class="fill"></div>
+                              <div class="fill fix"></div>
+                            </div>
+                          </div>
+                          <div class="inset">
+                            <div class="percentage"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="small-12 medium-12 large-7 cell engagement-title">
+                      <h3>تعداد تماس</h3>
+                      <p>شما {{ calls_count }} تماس طی ۲۴ ساعت گذشته داشته اید.</p>
+                      <a href="/number" class="widget-button text-left">دریافت شماره</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </section>
+
+
+{% endblock content %}

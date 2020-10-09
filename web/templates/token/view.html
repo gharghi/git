@@ -1,0 +1,29 @@
+{% extends 'generic.html' %}
+{% block content %}
+
+
+
+<section class="table-onit">
+            <div class="grid-x">
+              <div class="cell">
+                <div class="widget-box with-padding">
+                <a href="/token/regenerate" class="button submit-btn expanded">تولید مجدد کلید</a>
+                  <table>
+
+
+                    <tbody>
+
+                      <tr>
+                        <td>توکن:</td>
+
+                          <td>{{ token.0 }}</td>
+
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </section>
+
+{% endblock content %}

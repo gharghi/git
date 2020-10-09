@@ -1,0 +1,62 @@
+{% extends 'generic.html' %}
+{% load static %}
+{% block content %}
+    <section class="forms">
+        <div class="grid-x">
+            <div class="cell">
+                <div class="widget-box with-padding">
+                    <form class="signup identity-form" method="post">
+                        {% csrf_token %}
+                        <div class="form-header">
+                            <div class="form-header-icon">
+                                <img src="{% static 'images/face-scan.svg' %}" alt="">
+                            </div>
+                            <div class="form-header-title">
+                                <h2>ویرایش حساب‌کاربری</h2>
+                            </div>
+                        </div>
+                        <div class="grid-x">
+                            <div class="small-12 large-6 padding-left-05">
+
+
+                                <div class="floated-label-wrapper">
+                                    <label for="full-name">نام</label>
+                                    <input type="text" id="name" name="first_name" placeholder="نام" tabindex="1"
+                                           value="{{ user.first_name }}">
+                                </div>
+
+
+                                <div class="floated-label-wrapper">
+                                    <label for="email">شماره همراه</label>
+                                    <input type="tel" id="tel" name="tel" placeholder="شماره همراه" tabindex="5"
+                                           value="{{ user.tel }}">
+                                </div>
+
+
+                            </div>
+                            <div class="small-12 large-6">
+                                <div class="floated-label-wrapper">
+                                    <label for="family">نام خانوادگی</label>
+                                    <input type="text" id="family" name="last_name" placeholder="نام خانوادگی"
+                                           tabindex="2" value="{{ user.last_name }}">
+                                </div>
+
+                                <div class="floated-label-wrapper">
+                                    <label for="national_id">کدملی</label>
+                                    <input type="text" id="national_id" name="national_id" placeholder="کد ملی"
+                                           tabindex="3" value="{{ user.national_id }}">
+                                </div>
+
+
+                            </div>
+
+
+                            <div></div>
+                        </div>
+                        <input class="button submit-btn expanded" type="submit" value="ویرایش">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock content %}

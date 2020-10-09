@@ -1,0 +1,31 @@
+{% load static %}
+{% block sidebar %}
+        <div class="hide-for-small-only medium-12 large-4 cell profile-nav-holder" data-sticky-container>
+          <div class="sticky" data-sticky data-margin-top="6" data-anchor="dashboard-sticky">
+            <div class="widget-box">
+              <div class="profile-avatar">
+                <div class="avatar-holder">
+                  <img src="{%  static 'images/profile.png' %}" alt="">
+                </div>
+                <div class="name-holder">
+                  <h2> سلام {{ request.user.first_name }}  </h2>
+                  <p>میزان اعتبار: {{ request.user.balance }} ریال</p>
+                  <a href="/profile" class="widget-button float-left">ویرایش</a>
+                  <a href="/changePassword" class="widget-button float-left">تغییر رمز عبور</a>
+                </div>
+              </div>
+              <div class="meun-holder">
+                <ul class="vertical menu icons icon-left">
+                  <li><a href="/credit/add"><i class="far fa-credit-card"></i> <span>افزایش اعتبار</span></a></li>
+                    <li><a href="/payment/view"><i class="far fa-receipt"></i> <span>گزارش پرداختها</span></a></li>
+                  <li><a href="/number"><i class="far fa-gem"></i> <span>شماره ها</span></a></li>
+                    <li><a href="/cdr"><i class="fas fa-headset"></i> <span>گزارش درخواست ها</span></a></li>
+                  <li><a href="/token/view"><i class="fas fa-quote-left"></i> <span>تنظیمات API</span></a></li>
+
+                </ul>
+              </div>
+            </div>
+          </div>
+
+        </div>
+{% endblock sidebar %}

@@ -1,0 +1,76 @@
+{% block messages %}
+    {% if messages %}
+        {% for message in messages %}
+
+{#            <div class="widget-box with-padding">#}
+
+                <div data-closable="" class="callout alert-callout-border
+                    {% if 'success' in message.tags %}
+                        success
+                    {% elif 'error' in message.tags %}
+                        alert
+                    {% elif 'info' in message.tags %}
+                        primary
+                    {% elif 'warning' in message.tags %}
+                        warning
+                    {% endif %}
+                ">
+                  {{ message }}
+                    <button class="close-button" aria-label="Dismiss alert" type="button" data-close="">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+{#            </div>#}
+        {% endfor %}
+    {% endif %}
+{% endblock messages %}
+{##}
+{#<section class="alerts-on">#}
+{#            <div class="grid-x">#}
+{#              <div class="cell">#}
+{#                <div class="widget-box with-padding">#}
+{#                  <div data-closable="" class="callout alert-callout-border primary">#}
+{#                    <strong>اوپس!</strong> اشتباهی انجام داده اید.#}
+{#                    <button class="close-button" aria-label="Dismiss alert" type="button" data-close="">#}
+{#                      <span aria-hidden="true">×</span>#}
+{#                    </button>#}
+{#                  </div>#}
+{##}
+{#                  <div data-closable="" class="callout alert-callout-border secondary">#}
+{#                    <strong>اشتباه!</strong> اتفاقی افتاده است.#}
+{#                    <button class="close-button" aria-label="Dismiss alert" type="button" data-close="">#}
+{#                      <span aria-hidden="true">×</span>#}
+{#                    </button>#}
+{#                  </div>#}
+{##}
+{#                  <div data-closable="" class="callout alert-callout-border radius">#}
+{#                    <strong>اوپس</strong> اوپسی خنثی برای شما است.#}
+{#                    <button class="close-button" aria-label="Dismiss alert" type="button" data-close="">#}
+{#                      <span aria-hidden="true">×</span>#}
+{#                    </button>#}
+{#                  </div>#}
+{##}
+{#                  <div data-closable="" class="callout alert-callout-border alert radius">#}
+{#                    <strong>خطا!</strong> ناموس خطا نکن دوست عزیز.#}
+{#                    <button class="close-button" aria-label="Dismiss alert" type="button" data-close="">#}
+{#                      <span aria-hidden="true">×</span>#}
+{#                    </button>#}
+{#                  </div>#}
+{##}
+{#                  <div data-closable="" class="callout alert-callout-border success">#}
+{#                    <strong>ایول!</strong> شما تسک هاتون رو درست انجام دادید.#}
+{#                    <button class="close-button" aria-label="Dismiss alert" type="button" data-close="">#}
+{#                      <span aria-hidden="true">×</span>#}
+{#                    </button>#}
+{#                  </div>#}
+{##}
+{#                  <div data-closable="" class="callout alert-callout-border warning">#}
+{#                    <strong>هشدار!</strong> این منطقه مین گذاری شده است.#}
+{#                    <button class="close-button" aria-label="Dismiss alert" type="button" data-close="">#}
+{#                      <span aria-hidden="true">×</span>#}
+{#                    </button>#}
+{#                  </div>#}
+{#                </div>#}
+{#              </div>#}
+{#            </div>#}
+{#          </section>#}

@@ -1,0 +1,137 @@
+/* Small only */
+@media screen and (max-width: 39.9375em) {
+  .signup.signing {
+    padding: 10px;
+}
+  .site-logo {
+
+    width: 35px;
+  }
+  .site-title h1 {
+
+    font-weight: 800;
+    font-size: 1.1em;
+    line-height: 1;
+    margin-bottom: 0;
+
+}
+.total-table {
+
+    width: 260px;
+  }
+  .close-button, .close-button.medium {
+
+    right: 92%;
+
+}
+.invoice-header {
+  text-align: center;
+}
+  .not-showing {
+    display: none;
+  }
+  .widget-box {
+    min-height: 270px;
+  }
+  .form-header {
+    text-align: center;
+}
+.link-to-login {
+    text-align: center;
+    min-height: 120px;
+}
+.padding-left-05 {
+    padding-left: 0;
+}
+.form-header-title {
+    display: block;
+}
+.circle-graph {
+  margin: 22px 0 12px 0;
+}
+.circle-holder-medium {
+
+    position: absolute;
+    left: 50%;
+    transform: translatex(-50%);
+
+}
+.widget-icons {
+
+    border-top-right-radius: 0.75em;
+    border-top-left-radius: 0.75em;
+    border-bottom-right-radius: 0;
+
+
+}
+.engagement-circle {
+
+    border-top-right-radius: 0.75em;
+    border-top-left-radius: 0.75em;
+    border-bottom-right-radius: 0;
+
+
+}
+}
+
+/* Medium and up */
+@media screen and (min-width: 40em) {}
+
+/* Medium only */
+@media screen and (min-width: 40em) and (max-width: 63.9375em) {
+  .not-showing {
+    display: none;
+  }
+  .widget-icons {
+
+      border-top-right-radius: 0.75em;
+      border-top-left-radius: 0.75em;
+      border-bottom-right-radius: 0;
+
+
+  }
+  .engagement-circle {
+
+      border-top-right-radius: 0.75em;
+      border-top-left-radius: 0.75em;
+      border-bottom-right-radius: 0;
+
+
+  }
+  .circle-graph {
+    margin: 22px 0 12px 0;
+  }
+  .circle-holder-medium {
+
+    position: absolute;
+    left: 50%;
+    transform: translatex(-50%);
+
+}
+  .link-to-login {
+      text-align: center;
+      min-height: 120px;
+  }
+  .padding-left-05 {
+      padding-left: 0;
+  }
+  .svg-animate-login-screen {
+    width: 300px;
+  }
+  .profile-nav-holder {
+    display: none;
+  }
+  .widget-box {
+    min-height: 270px;
+  }
+}
+
+/* Large and up */
+@media screen and (min-width: 64em) {
+  .canvas-menu{
+    display: none;
+  }
+}
+
+/* Large only */
+@media screen and (min-width: 64em) and (max-width: 74.9375em) {}

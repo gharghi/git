@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block generic %}
+    <body class="on-dashboard">
+    <div class="off-canvas-wrapper">
+        <div class="grid-container dashboard-wrap off-canvas-wrapper-inner" data-off-canvas-wrapper>
+            {% block small_menu %}
+                {% include 'small_menu.html' %}
+            {% endblock small_menu %}
+            <header class="grid-x site-branding">
+                <div class="small-8 medium-5 large-4 cell logo" onclick="location.href = '/';">
+                    <div class="site-name">
+                        <div class="site-logo">
+                            <img src="{% static 'images/logo.png' %}" alt="">
+                        </div>
+                        <div class="site-title">
+                            <h1>سامانه امن آوا</h1>
+                            <p>پنل مشترکین</p>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="hide-for-small-only medium-4 large-6 cell search-bar">
+                    <div class="search-bar-holder">
+
+                    </div>
+                </div>
+                <div class="small-4 medium-3 large-2 cell logout text-left">
+                    <div class="logout-holder">
+                        <a href="{% url 'logout' %}" class="logout-button float-left not-showing"><img
+                                src="{% static 'images/logout.svg' %}" alt=""><span>خروج</span></a>
+                        <button type="button" class="button canvas-menu" data-toggle="offCanvasRight"><img
+                                src="{% static 'images/menu.svg' %}" alt=""></button>
+                    </div>
+
+                </div>
+            </header>
+            <main class="dashboard off-canvas-content grid-x grid-margin-x" data-off-canvas-content>
+                {% block sidebar %}
+                    {% include 'sidebar.html' %}
+                {% endblock sidebar %}
+                <div class="small-12 medium-12 large-8 cell dashboard-inner" id="dashboard-sticky" data-something>
+                    {% block messages %}
+                        {% include 'message.html' %}
+                    {% endblock %}
+                    {% block content %}
+                    {% endblock content %}
+                </div>
+            </main>
+        </div>
+    </div>
+    <script src="{% static 'js/vendor/jquery.js' %}"></script>
+    <script src="{% static 'js/vendor/what-input.js' %}"></script>
+    <script src="{% static 'js/vendor/foundation.js' %}"></script>
+    <script src="{% static 'js/app.js' %}"></script>
+
+
+    </body>
+
+{% endblock generic %}
