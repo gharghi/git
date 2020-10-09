@@ -21,7 +21,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/dev/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'eukt=xaw_&#$!8wzmqmct*y08o6)=$(j=ak;jsdh$$ksjkk8wdh2$ydxdqr9$u'
+SECRET_KEY = 'SECRET_KEY'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
@@ -83,9 +83,9 @@ WSGI_APPLICATION = 'web.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'gitlabs',
-        'USER': 'root',
-        'PASSWORD': '0300301',
+        'NAME': 'NAME',
+        'USER': 'USER',
+        'PASSWORD': 'PASS',
         'HOST': '127.0.0.1',
         'PORT': '3306',
     }
@@ -140,11 +140,11 @@ STATICFILES_DIRS = [
 ]
 
 SESSION_ENGINE = 'web.apps.jwt_store.jwt_sessionstore'
-SESSION_COOKIE_NAME = 'Gitlabs'
+SESSION_COOKIE_NAME = 'COOKIE_NAME'
 SESSION_EXPIRE_AT_BROWSER_CLOSE = False
 SESSION_SAVE_EVERY_REQUEST = True
 SESSION_COOKIE_AGE = 30 * 60
-JWT_SECRET = 'adsfdsszdfrrrrq334@@%%'
+JWT_SECRET = 'JWT_SECRET'
 SESSION_COOKIE_SAMESITE = 'strict'
 AUTH_USER_MODEL = 'jwt_store.User'
 
@@ -154,8 +154,8 @@ AUTH_USER_MODEL = 'jwt_store.User'
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_USE_TLS = True
 EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = 'bgpmonitor.net@gmail.com'
-EMAIL_HOST_PASSWORD = 'Cc3Dd444'
+EMAIL_HOST_USER = 'EMAIL'
+EMAIL_HOST_PASSWORD = 'PASS'
 EMAIL_PORT = 587
 
 LOGIN_URL = '/accounts/login'
@@ -164,9 +164,9 @@ LOGOUT_REDIRECT_URL = '/'
 
 LOG_PATH = '/var/log/gitlabs/'
 
-MERCHANT = '80ea75d6-c3d0-11e9-8050-000c295eb8fc'
+MERCHANT = 'MERCHANT_ID'
 CALLBACK_URL = 'https://gitlabs.ir/verify/'
 
 PROJECTS_LIMIT = 10
-TOKEN = 't1GyU3xCC1CQFjvVbD9z'
-GIT_URL = 'http://git.amnava.ir/api/v4/'
+TOKEN = 'TOKEN_OF_GIT_SERVER'
+GIT_URL = 'API_ADDRESS_OF_GIT'
